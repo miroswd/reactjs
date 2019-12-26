@@ -1,0 +1,33 @@
+/// Configurando estrutura ///
+>>> yarn init -y
+>>> yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli -D
+>>> yarn add react react-dom
+
+//Configurando o webpack
+Crio um arquivo babel.config.js
+Crio um arquivo webpack.config.js
+
+
+Crio uma pasta src para armazenar todo o código
+src/index.js 
+    - arquivo de entrada da aplicação, tudo vai partir desse arquivo
+
+
+Crio a pasta public
+  // Armazenará o bundle
+  // Crio um arquivo html para importar o bundle
+>>> yarn add babel-loader -D
+
+   -- No package.json, scripts -> build, pega o arquivo js e converte no formato que o navegador entende
+
+>>> yarn add webpack-dev-server -D
+
+no webpack.config, incluo o devServer
+package.json -> scripts, dev
+  ao rodar yarn dev, ele dará uma porta do localhost
+  --mode development, deixa o código legível
+  Alterando para --mode production, deixa o código mais leve
+
+  >>> yarn dev => para ambiente de desenvolvimento
+  >>> yarn build => para produção
+
