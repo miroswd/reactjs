@@ -7,4 +7,3 @@ import App from './app'
 
 //render(<h1>Hello World!</h1>, document.querySelector('div#app'))
 render(<App />, document.querySelector("div#app"))
-
