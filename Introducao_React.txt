@@ -40,4 +40,8 @@ index.html crio uma div, que será chamada no index.js
 
 ***Toda vez que for usar o jsx, o react precisa estar incluso no arquivo***
 
+/// Adicionando CSS
+adicionar 2 loaders
+>>> yarn add style-loader css-loader -D
 
+no webpack, testar arquivos que terminam com css
