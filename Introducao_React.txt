@@ -31,3 +31,13 @@ package.json -> scripts, dev
   >>> yarn dev => para ambiente de desenvolvimento
   >>> yarn build => para produção
 
+
+/// Criando componente raiz ///
+Já tem no preset a configuração para usar o react
+
+No index, começo importando o react
+index.html crio uma div, que será chamada no index.js
+
+***Toda vez que for usar o jsx, o react precisa estar incluso no arquivo***
+
+
