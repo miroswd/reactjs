@@ -49,3 +49,15 @@ no webpack, testar arquivos que terminam com css
 /// Importando imagem
 >>> yarn add file-loader -D
 Configurar novo loader no webpack
+
+/// Criando segundo componente da aplicação
+Crio uma pasta onde irá guardar a maioria dos componentes, menos o principal, nesse caso o app.js
+**Posso escrever o componente no formato de função ou classe
+
+Toda vez q uma variável do componente precisar ser modificada, se dá o nome de estado
+na classe é possível usar uma propriedade de estado (state -> precisa ter o nome de state)
+
+para usar a sintaxe de state, sem definir o constructor
+>>> yarn add @babel/plugin-proposal-class-properties -D
+
+passo esse plugin no babel.config
