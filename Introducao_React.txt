@@ -45,3 +45,7 @@ adicionar 2 loaders
 >>> yarn add style-loader css-loader -D
 
 no webpack, testar arquivos que terminam com css
+
+/// Importando imagem
+>>> yarn add file-loader -D
+Configurar novo loader no webpack
