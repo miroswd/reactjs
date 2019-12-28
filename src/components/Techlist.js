@@ -37,6 +37,10 @@ class Techlist extends Component {
     // Crio o array vazio, copio todas as coisa e adiciono como última posição, o newTech
   }
 
+  handleDelete = (tech) => {
+   // console.log(tech)
+   this.setState({techs: this.state.techs.filter(t => t !== tech)}) // o state passa a ser as techs diferente da tech q foi passada
+  }
   render() {
     return (
       // Retornando um html com mais de uma linha, por isso entre ()
@@ -44,7 +48,13 @@ class Techlist extends Component {
       <form onSubmit={this.handleSubmit}>
       <h1>{this.state.newTech}</h1>
       <ul>
-        {this.state.techs.map(tech => <li key={tech}>{tech}</li>)} {/*Passando o próprio item da lista como chave única*/}
+        {this.state.techs.map(tech => (
+        <li key={tech}>
+          {tech}
+          <button type="button" onClick={() => this.handleDelete(tech)}>Remover</button> {/*Só vai executar na tech () => */}
+        </li>
+        )
+        )} {/*Passando o próprio item da lista como chave única*/}
       </ul>
 
       <input
