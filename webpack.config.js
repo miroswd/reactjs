@@ -13,11 +13,17 @@ module.exports = {
     rules:[
       // Carregando os loders para transpilar o código
       {
-        test: /\.js/, // Expressão regular, entre duas barras, buscando exatamente 
+        test: /\.js$/, // Expressão regular, entre duas barras, buscando exatamente 
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
         }
+      }, {
+        test: /\.css$/,
+        use: [
+          {loader: 'style-loader'}, // Manda o css pra dentro da <style> do html
+          {loader: 'css-loader'} // Entende a importação de outros arquivos (png, css, ...)
+        ]
       }
     ]
   }
