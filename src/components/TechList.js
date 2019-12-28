@@ -1,5 +1,6 @@
 // Lista de tecnologias
 import React, {Component} from 'react'
+import TechItem from './TechItem'
 
 class Techlist extends Component {
   // Todo componente feito no modelo de classe deve ter o método render
@@ -49,10 +50,13 @@ class Techlist extends Component {
       <h1>{this.state.newTech}</h1>
       <ul>
         {this.state.techs.map(tech => (
-        <li key={tech}>
-          {tech}
-          <button type="button" onClick={() => this.handleDelete(tech)}>Remover</button> {/*Só vai executar na tech () => */}
-        </li>
+        // Agora o <li> está em um arquivo separado -> TechItem.js
+          <TechItem
+            key={tech} 
+            tech = {tech} // propriedade
+            onDelete = {() => this.handleDelete(tech)} // Passando uma function como propriedade para o componente
+          />
+       
         )
         )} {/*Passando o próprio item da lista como chave única*/}
       </ul>

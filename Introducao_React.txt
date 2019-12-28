@@ -73,3 +73,20 @@ Criar um fragment -> tag sem nome
 /// Removendo itens do estado 
 para quebrar linha, tenho que passar um () em volta
 crio um botão abaixo do texto da lista
+
+///Propriedades do react
+// Separando itens do componente
+
+propriedade -> Tudo que é passado pro componente dentro da tag
+
+No estilo de function, é possível usar através de parâmetro:
+  function TechItem({tech}) {
+    <li {tech}> // forma desestruturada
+  }
+
+  function techList(props){
+    <li this.props.tech> // estruturada
+  }
+
+No estilo class:
+  é necessário usar o this.props
