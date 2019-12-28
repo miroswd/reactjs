@@ -90,3 +90,24 @@ No estilo de function, é possível usar através de parâmetro:
 
 No estilo class:
   é necessário usar o this.props
+
+
+/// DefaultProps e PropTypes
+// DefaultProps
+valor definido caso o paramêtro não tiver um valor
+{tech = 'oculto'}
+
+// Forma Global
+TechItem.defaultProps = {
+  tech: 'Oculto'
+}
+
+Pode ser usado na class tmb, fica melhor se executar como static
+static defaultProps = }
+  tech: 'Oculto'
+} 
+
+// PropTypes -> Validando as Propriedades
+supondo que o desenvolvedor passou na propriedade, ao invés de uma função passou um texto
+
+>>> yarn add prop-types 
