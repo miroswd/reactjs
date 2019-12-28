@@ -13,6 +13,7 @@
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
@@ -21,5 +22,7 @@
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
-  }
+  },
+  "repository": "https://github.com/miroswd/reactjs.git",
+  "author": "miroswd <altamirsantos93@hotmail.com>"
 }

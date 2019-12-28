@@ -24,6 +24,17 @@ module.exports = {
           {loader: 'style-loader'}, // Manda o css pra dentro da <style> do html
           {loader: 'css-loader'} // Entende a importação de outros arquivos (png, css, ...)
         ]
+      },
+      {
+        test: /.\(gif|png|jpe?g)$/i,
+        use: [
+          {loader: "file-loader"}
+        ]
+        /*
+          $ -> Pega o contéudo final do nome do arquivo
+          ? -> Torna o uso do 'e' opcional
+          i -> Case insensitive
+        */
       }
     ]
   }

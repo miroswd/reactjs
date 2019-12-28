@@ -1,7 +1,9 @@
 import React from 'react'
 import './app.css'
+
+import nomeDaImagem from './assest/miranha.jpg'
 function App(){
-  return <h1>Hello Rocketseat</h1>
+  return <img src={nomeDaImagem} width="200" /> // {variável}
 }
 
 export default App;
