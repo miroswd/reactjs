@@ -4,6 +4,15 @@ import TechItem from './TechItem'
 
 class Techlist extends Component {
   // Todo componente feito no modelo de classe deve ter o método render
+  
+  
+  /*
+    static defaultProps = {
+      tech: 'Oculto'
+    }
+   */
+
+
   state = { // variável imutável - setSate() permite alterar o valor
     newTech: '', // Vai armanezar o novo valor, digitado pelo o usuário
     techs: [
@@ -55,10 +64,12 @@ class Techlist extends Component {
             key={tech} 
             tech = {tech} // propriedade
             onDelete = {() => this.handleDelete(tech)} // Passando uma function como propriedade para o componente
-          />
-       
+          />       
         )
-        )} {/*Passando o próprio item da lista como chave única*/}
+        
+        )}
+        {/*Passando o próprio item da lista como chave única*/}
+        {/* <TechItem /> //Passando sem propriedade */}
       </ul>
 
       <input
