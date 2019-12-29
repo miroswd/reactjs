@@ -4,23 +4,50 @@ import TechItem from './TechItem'
 
 class Techlist extends Component {
   // Todo componente feito no modelo de classe deve ter o método render
-  
-  
+    
   /*
     static defaultProps = {
       tech: 'Oculto'
     }
    */
 
-
   state = { // variável imutável - setSate() permite alterar o valor
     newTech: '', // Vai armanezar o novo valor, digitado pelo o usuário
     techs: [
-      'Node.js',
-      'ReactJS',
-      'React Native'
     ]
 };
+
+// Executado assim que o componente aparece em tela
+componentDidMount(){
+  // Recuperando techs do localstorage (converter de json para array)
+  const techs = localStorage.getItem('techs')
+
+  if (techs){
+    this.setState({techs: JSON.parse(techs)})
+  }
+
+}
+
+// Executado sempre que houver alterações nas props ou estado
+componentDidUpdate(_ /**prevProps */, prevState){
+  // Coloco _ pra indicar q só está sendo utilizado o prevState
+  //recebe as propriedades antigas e state antigo
+  // this.props, this.state 
+  if(prevState !== this.state.techs){
+    // Verifica se o valor de techs foi alterado
+    // localStorage só aceita json, não aceita array
+    localStorage.setItem('techs', JSON.stringify(this.state.techs))
+  }
+}
+
+// Executado quando o componente deixa de existir
+componentWillUnmount(){
+  // Limpa qualquer tipo de sujeira, caso o o componente deixe algum rastro
+  // Muito pouco utilizado
+
+}
+
+
 
   handleInputChange = e => {
     // Toda vez que criamos uma função própria dentro de um componente estilo class
@@ -51,6 +78,7 @@ class Techlist extends Component {
    // console.log(tech)
    this.setState({techs: this.state.techs.filter(t => t !== tech)}) // o state passa a ser as techs diferente da tech q foi passada
   }
+
   render() {
     return (
       // Retornando um html com mais de uma linha, por isso entre ()
