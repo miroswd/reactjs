@@ -111,3 +111,23 @@ static defaultProps = }
 supondo que o desenvolvedor passou na propriedade, ao invés de uma função passou um texto
 
 >>> yarn add prop-types 
+
+/// Ciclo de vida do componente
+
+// Executado assim que o componente aparece em tela
+componentDidMout(){
+
+}
+
+// Executado sempre que houver alterações nas props ou estado
+componentDidUpdate(prevProps, prevState){
+  //recebe as propriedades antigas e state antigo
+  // this.props, this.state 
+}
+
+// Executado quando o componente deixa de existir
+componentWillUnmount(){
+
+}
+
+-> para testar, será usado o banco de dados do navegador (localstorage)
