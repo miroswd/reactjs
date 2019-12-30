@@ -63,7 +63,7 @@ para usar a sintaxe de state, sem definir o constructor
 passo esse plugin no babel.config
 
 /// Estado e Imutabilidade
-Toda vez que tem uma iteração, mao, list, precisa ter um valor único na key
+Toda vez que tem uma iteração, map, list, precisa ter um valor único na key
 
 
 **O react não permite criar mais de um item no html, sem ter um container por volta
